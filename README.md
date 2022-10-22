@@ -8,16 +8,21 @@ The project structure is as follows:
 2. `reports` - holds all the HTML exports from the notebooks mentioned above.
 3. `data` - holds the data supplied for the assignment.
 4. `docs` - holds the original documents supplied for the assignment by the teacher.
+5. `scripts` - helper scripts to manage environments and start the notebook.
 
 ## Setup 🔧
 Run the following command from the project root directory.  
 ```bash
-conda env create -f ./environment.yml
-conda activate ntnu-dpnv-assignment-4
-```
-Then we can use `jupyter-lab` to navigate to the notebook.  
+chmod 777 ./scripts/*
+```  
+This will grant execution permission to helper scripts.  
+Then you can use the following script to create the environment needed to run the notebook.  
 ```bash
-jupyter-lab ./notebooks/notebook_1.ipynb
+./scripts/restore-environment.sh
+```
+Followed by the following script to start the project.  
+```bash
+./scripts/start-project.sh
 ```
 ## Report 📔
 The report is available locally in the `docs` folder as mentioned above.  
